@@ -1,0 +1,8 @@
+POST http://localhost:8080/mensajes/enviar
+Content-Type: application/json
+
+{
+    "contenido": "Mensaje Nuevo"
+}
+###
+GET http://localhost:8080/correo/mail

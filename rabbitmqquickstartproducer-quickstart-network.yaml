@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  creationTimestamp: null
+  name: rabbitmqquickstartproducer-quickstart-network
+spec:
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          io.kompose.network/rabbitmqquickstartproducer_rabbitmq-quickstart-network: "true"
+  podSelector:
+    matchLabels:
+      io.kompose.network/rabbitmqquickstartproducer_rabbitmq-quickstart-network: "true"
